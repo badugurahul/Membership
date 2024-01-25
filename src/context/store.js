@@ -16,6 +16,7 @@ export const ContextStore = ( { children } ) => {
       website: ""
    }
    const [data, setData] = useState( initialdata )
+   
    return ( <StoreData.Provider value={{ data, setData }}>
       {children}
    </StoreData.Provider> )
