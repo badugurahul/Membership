@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import './RegisterFormmember.css'
+
 import { useNavigate } from 'react-router-dom'
 import { StoreData } from '../../../context/store'
 
@@ -50,8 +50,8 @@ export const RegisterFormmember = () => {
     <div className='w-full flex justify-center items-center  h-[calc(100vh-6rem)] '>
       <div className='shadow-xl h-fit rounded-3xl p-20 space-y-8 mb-16'>
         <div>
-          <div className=' text-4xl text-bold'>Membership Form</div>
-          <p className='text-sm text-bold text-gray-600 mt-2'>Fill details to get a member ship card</p>
+          <div className=' text-4xl text-bold'>ID card Form</div>
+          <p className='text-sm text-bold text-gray-600 mt-2'>Fill details to get ID card</p>
         </div>
         <form onSubmit={handleformsubmit} className='grid grid-cols-2 gap-10 place-content-center items-center '>
           {/* <input placeholder='Enter your name' type="text" value={data.name} name="name" onChange={handlechange} required />
@@ -106,9 +106,8 @@ export const RegisterFormmember = () => {
               <option className='px-3'>Gold</option>
             </select>
           </div>
-          {/* <input type="file" name='file' onChange={handleImg} value={img} id="formFile" /> */}
           <input type="file" className="file-input w-full max-w-xs" onChange={handleImg} value={img} id="formFile" />
-          <button type='submit' className='w-[200px] px-8 py-2 bg-blue-500 text-white rounded-lg'>submit</button>
+          <button type='submit' className='w-[200px] px-8 py-2 bg-pin text-white rounded-lg'>Submit</button>
         </form>
       </div>
 

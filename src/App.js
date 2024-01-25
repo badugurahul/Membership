@@ -3,9 +3,10 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Membership from './membershipcard/membership';
 import Navbar from './Pages/Home/Components/Navbar'
-import {RegisterFormmember} from './Pages/Home/Components/RegisterFormmember';
+import { RegisterFormmember } from './Pages/Home/Components/RegisterFormmember';
 import Homepage from './Pages/Home/Homepage'
 import LoginPage from './Pages/Home/Loginpage';
+import Typesofmembership from './Pages/Home/Components/Typesofmembership';
 
 
 function App () {
@@ -13,11 +14,11 @@ function App () {
     <div className="App">
       <Navbar />
       <Routes>
-      <Route path='/' element={<LoginPage/>}></Route>
+        <Route path='/' element={<LoginPage />}></Route>
         <Route path='/home' element={<Homepage />}></Route>
-        <Route path="/member" element={<RegisterFormmember/>}></Route>
-        <Route path="/card" element={<Membership/>}></Route>
-        
+        <Route path="/member" element={<RegisterFormmember />}></Route>
+        <Route path="/card" element={<Membership />}></Route>
+        <Route path="/t" element={<Typesofmembership />}></Route>
       </Routes>
     </div>
   );

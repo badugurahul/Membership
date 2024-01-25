@@ -5,11 +5,9 @@ import { exportComponentAsPNG } from 'react-component-export-image'
 import { useReactToPrint } from 'react-to-print'
 
 
-const Membership = ( { value } ) => {
+const Membership = ( ) => {
    const datafromlocalstorage = JSON.parse( localStorage.getItem( "data" ) )
    const imagelocal = localStorage.getItem( "img" )
-   console.log(imagelocal)
-   // const { name } = datafromlocalstorage
    const componentRef = useRef();
    const handlePrint = useReactToPrint( {
       content: () => componentRef.current, documentTitle: "membership"
@@ -19,7 +17,6 @@ const Membership = ( { value } ) => {
    return (
 
       <div className='maincontainermembership'>
-
          <div ref={componentRef}>
             <div className='membershipcard'>
                <div className='cards'>
@@ -36,10 +33,7 @@ const Membership = ( { value } ) => {
                            <h3>Name  :  {datafromlocalstorage.name} </h3>
                            <h3>Role  :  {datafromlocalstorage.Role} </h3>
                            <h3>Email :  {datafromlocalstorage.email} </h3>
-
                         </div>
-
-
                      </div>
                      <div className='line'>
                         <h2>-- Member ship --</h2>

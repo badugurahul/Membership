@@ -1,10 +1,10 @@
 import React from "react"
 import { useState } from "react"
 // import Form from 'react-bootstrap/Form';
-import './loginform.css'
+
 import { useNavigate } from "react-router-dom";
 import logoimg from '../../assets/2919974.jpg'
-import Loading from "./Loading";
+
 
 const LoginPage = () => {
    const [email, setemail] = useState( "" )
@@ -23,11 +23,11 @@ const LoginPage = () => {
    return (
       <>
          <div className="w-full h-[calc(100vh-6rem)] flex justify-center items-center ">
-            <div className="flex items-center gap-24">
-               <div className="w-[800px]">
+            <div className="flex items-center gap-24 mb-20 ">
+               <div className="w-[600px]">
                   <img src={logoimg} alt='lg' />
                </div>
-               <div className="w-[500px] h-fit border rounded-lg shadow-2xl px-20 py-24 space-y-8">
+               <div className="w-[500px] h-fit shadow-2xl  rounded-lg  px-20 py-24 space-y-8">
                   <h1 className="text-2xl">Login</h1>
                   <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center gap-8 ">
                      <div class="relative w-full min-w-[200px] h-10">
@@ -47,7 +47,7 @@ const LoginPage = () => {
                         </label>
                      </div>
                      {/* <input placeholder="Enter your Password" value={password} type="password" onChange={( e ) => setPassword( e.target.value )} required /> */}
-                     <button type="submit" className='px-8 py-2 bg-blue-500 text-white rounded-lg'>Login</button>
+                     <button type="submit" className='px-8 py-2 bg-pin text-white rounded-lg'>Login</button>
                   </form>
                </div>
             </div>

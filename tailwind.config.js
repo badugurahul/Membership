@@ -4,7 +4,11 @@ const { default: daisyui } = require( 'daisyui' );
 module.exports = withMT( {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "pin": "#AC397A"
+      }
+    },
   },
   plugins: [require( "daisyui" )],
   daisyui: {
