@@ -1,23 +1,26 @@
-import React from "react"
-import { useState } from "react"
+import { useState, useContext } from "react"
 // import Form from 'react-bootstrap/Form';
 
 import { useNavigate } from "react-router-dom";
 import logoimg from '../../assets/2919974.jpg'
 
+import { StoreData } from "../../context/store";
+
 
 const LoginPage = () => {
    const [email, setemail] = useState( "" )
    const [password, setPassword] = useState( "" )
-   const navigate = useNavigate()
+   const navigate = useNavigate();
+   const { setCond } = useContext( StoreData );
    const handleSubmit = ( e ) => {
       e.preventDefault()
       JSON.stringify( localStorage.setItem( "email", email ) )
       JSON.stringify( localStorage.setItem( "password", password ) )
+      setCond( true )
       alert( 'loginsuccessfully' )
       setemail( "" )
       setPassword( "" )
-      navigate( "/home" )
+      navigate( "/home" );
    }
 
    return (
